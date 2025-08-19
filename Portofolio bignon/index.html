@@ -1,21 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
-  
-<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<html lang="fr">
 <head>
     <!-- required meta -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <!-- #keywords -->
-    <meta name="keywords" content="boot, Bootstrap, Protfolily HTML Template" />
+    <meta name="keywords" content="Innocent GBEDONOU, entrepreneur béninois, Bignon du Bénin, ameublement, design" />
     <!-- #description -->
     <meta
       name="description"
-      content="Protfolily - Responsive Personal Portfolio & Resume HTML Template"
+      content="Innocent GBEDONOU - Entrepreneur béninois passionné par le design et l'ameublement. Découvrez son parcours et son entreprise Bignon du Bénin."
     />
     <!-- #title -->
-    <title>Portfolify - Personal Portfolio & Resume HTML Template</title>
+    <title>Innocent GBEDONOU - Entrepreneur Béninois | Bignon du Bénin</title>
     <!-- #favicon -->
     <link
       rel="shortcut icon"
@@ -25,14 +24,45 @@
     <!-- ==== css dependencies start ==== -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <!-- AOS  -->
-    <link rel="stylesheet" href="unpkg.com/aos%403.0.0-beta.6/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.css" />
     <!-- swiper  -->
     <link
       rel="stylesheet"
-      href="cdn.jsdelivr.net/npm/swiper%4011/swiper-bundle.min.css"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <!-- ICON  -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Configuration PWA -->
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#78aba8" />
+    <meta name="msapplication-TileColor" content="#78aba8" />
+    <meta name="msapplication-navbutton-color" content="#78aba8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Bignon du Bénin" />
+    
+    <!-- Icônes PWA -->
+    <link rel="apple-touch-icon" href="assets/images/logo.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/images/logo.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo.png" />
+    <link rel="apple-touch-icon" sizes="167x167" href="assets/images/logo.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo.png" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://votre-domaine.com/" />
+    <meta property="og:title" content="Innocent GBEDONOU - Entrepreneur Béninois | Bignon du Bénin" />
+    <meta property="og:description" content="Innocent GBEDONOU - Entrepreneur béninois passionné par le design et l'ameublement. Découvrez son parcours et son entreprise Bignon du Bénin." />
+    <meta property="og:image" content="https://votre-domaine.com/assets/images/usera.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://votre-domaine.com/" />
+    <meta property="twitter:title" content="Innocent GBEDONOU - Entrepreneur Béninois | Bignon du Bénin" />
+    <meta property="twitter:description" content="Innocent GBEDONOU - Entrepreneur béninois passionné par le design et l'ameublement. Découvrez son parcours et son entreprise Bignon du Bénin." />
+    <meta property="twitter:image" content="https://votre-domaine.com/assets/images/usera.jpg" />
   </head>
   <body>
     <!-- don't remove this  -->
@@ -111,7 +141,7 @@
               <div
                 class="d-flex flex-column gap-8 justify-content-center align-items-center mt-6"
               >
-                <a href="index-2.html" class="side-icon p1-color bgn2-color brn4">
+                <a href="index.html" class="side-icon p1-color bgn2-color brn4">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="11"
@@ -164,17 +194,10 @@
                     </defs>
                   </svg>
                 </a>
-                <a href="checkout.html" class="position-relative">
-                  <div class="side-icon bg1-color">
-                    <i class="ph ph-shopping-cart n11-color"></i>
-                  </div>
-                  <div class="cart-counter">
-                    <span class="n1-color">02</span>
-                  </div>
-                </a>
+
                 <div class="d-flex flex-column align-items-center gap-1">
                   <span class="toggle_name fs-eleven n5-color">DarkMode</span>
-                  <button class="side-icon bg1-color mood_toggle">
+                  <button class="side-icon bg1-color mood_toggle" aria-label="Basculer entre le mode clair et sombre">
                     <i class="mood_icon ph-fill ph-moon fs-six n11-color"></i>
                   </button>
                 </div>
@@ -193,32 +216,31 @@
                     >
                       <img
                         src="assets/images/usera.jpg"
-                        alt="user"
+                        alt="Innocent GBEDONOU - Entrepreneur béninois"
                         class=""
                       />
                     </div>
-                    <span class="thumb">👋</span>
-                  </div>
+                    </div>
 
-                  <h4 class="n5-color fw-semibold fs-five mt-2 text-center">
-                    Bignon du Benin
-                  </h4>
+                  <h2 class="n5-color fw-semibold fs-five mt-2 text-center">
+                    Innocent GBEDONOU
+                  </h2>
                   <span class="n5-color fs-nine d-block text-center"
-                    >Partenaire d'aménagement d'intérieur</span
+                    >Entrepreneur béninois</span
                   >
                   <div
                     class="d-flex justify-content-center gap-2 align-items-center mt-4"
                   >
-                    <a href="javascript:void(0)" class="social-icon p1-color">
+                    <a href="https://www.facebook.com/innocent.gbedonou.12/" class="social-icon p1-color">
                       <i class="ph ph-facebook-logo"></i>
                     </a>
-                    <a href="javascript:void(0)" class="social-icon p1-color">
+                    <a href="https://www.instagram.com/bignondubenin?igsh=YzljYTk1ODg3Zg=" class="social-icon p1-color">
                       <i class="ph ph-instagram-logo"></i>
                     </a>
-                    <a href="javascript:void(0)" class="social-icon p1-color">
-                      <i class="ph ph-x-logo"></i>
+                    <a href="https://www.tiktok.com/@gbedonou.innocent?_t=ZM-8yxnT9y29iS&_r=1" class="social-icon p1-color">
+                      <i class="ph ph-tiktok-logo"></i>
                     </a>
-                    <a href="javascript:void(0)" class="social-icon p1-color">
+                    <a href="https://linkedin.com/" class="social-icon p1-color">
                       <i class="ph ph-linkedin-logo"></i>
                     </a>
                   </div>
@@ -229,27 +251,17 @@
                   <ul class="d-flex flex-column gap-3">
                     <li class="rounded-3 bg1-color">
                       <a
-                        href="index-2.html"
+                        href="index.html"
                         class="d-flex align-items-center gap-2 n11-color fs-eight px-3 py-2"
-                        ><i class="ph ph-user fs-six"></i> A Propos</a
+                        ><i class="ph ph-house fs-six"></i> Accueil</a
                       >
                     </li>
-
                     <li class="rounded-3">
                       <a
-                        href="https://catalogue-bignon-du-benin.vercel.app/"
-                        class="d-flex justify-content-between align-items-center"
+                        href="about.html"
+                        class="d-flex align-items-center gap-2 n5-color fs-eight px-3 py-2"
+                        ><i class="ph ph-user fs-six"></i> À Propos</a
                       >
-                        <div
-                          class="d-flex align-items-center gap-2 n5-color fs-eight px-3 py-2"
-                        >
-                          <i class="ph ph-code-block fs-six"></i> Catalogue
-                        </div>
-                        <span
-                          class="n5-color bg2-color fs-ten px-1 pt-1 rounded-2 me-3"
-                          >1</span
-                        >
-                      </a>
                     </li>
                     <li class="rounded-3">
                       <a
@@ -261,12 +273,12 @@
                   </ul>
                 </div>
               </div>
-              <a
+              <!-- <a
                 href="contact.html"
                 class="primary-btn fw-medium px-3 px-md-6 py-2 py-md-4 rounded-pill d-flex align-items-center gap-2 mx-auto"
               >
                 <i class="ph ph-paper-plane-tilt"></i> Contactez-Nous
-              </a>
+              </a> -->
             </div>
           </div>
         </div>
@@ -278,7 +290,7 @@
         <div
           class="w-100 bgn1-color p-3 position-fixed z-3 top-0 d-lg-none d-flex align-items-center justify-content-between br-bottom-n5 box-shadow1"
         >
-          <a href="index-2.html" class="side-icon bgn2-color brn4">
+          <a href="index.html" class="side-icon bgn2-color brn4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="11"
@@ -333,16 +345,11 @@
           </a>
 
           <div class="d-flex gap-3 align-items-center">
-            <a href="checkout.html" class="position-relative">
-              <div class="side-icon bg1-color">
-                <i class="ph ph-shopping-cart n11-color"></i>
+              <div class=" ">
               </div>
-              <div class="cart-counter-header">
-                <span class="n1-color">02</span>
+              <div class="">
               </div>
-            </a>
-            <button class="side-icon bg1-color mood_toggle">
-              <i class="mood_icon ph-fill ph-moon fs-six n11-color"></i>
+            <button class=" ">
             </button>
           </div>
         </div>
@@ -355,87 +362,28 @@
             <ul class="d-flex gap-1 align-items-center justify-content-between">
               <li class="rounded-3 bg1-color">
                 <a
-                  href="index-2.html"
+                  href="index.html"
                   class="d-flex align-items-center gap-2 n11-color fs-eight p-2"
+                >
+                  <span
+                    class="fs-five d-flex align-items-center justify-content-center"
+                  >
+                    <i class="ph-fill ph-house"></i>
+                  </span>
+                  <span class="d-none d-md-block">Accueil</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="d-flex align-items-center gap-2 n5-color fs-eight p-2"
                 >
                   <span
                     class="fs-five d-flex align-items-center justify-content-center"
                   >
                     <i class="ph-fill ph-user"></i>
                   </span>
-                  <span class="d-none d-md-block">About Me</span></a
-                >
-              </li>
-              <li>
-                <a
-                  href="portfolio.html"
-                  class="d-flex justify-content-between align-items-center"
-                >
-                  <div
-                    class="d-flex align-items-center gap-2 n5-color fs-eight p-2"
-                  >
-                    <span
-                      class="fs-five d-flex align-items-center justify-content-center"
-                    >
-                      <i class="ph-fill ph-code-block"></i>
-                    </span>
-                    <span class="d-none d-md-block">Portfolio</span>
-                  </div>
-                  <span
-                    class="n5-color bg2-color fs-ten px-1 pt-1 rounded-2 me-3 d-none d-md-block"
-                    >16</span
-                  >
-                </a>
-              </li>
-              <li>
-                <a
-                  href="price.html"
-                  class="d-flex align-items-center gap-2 n5-color fs-eight p-2"
-                >
-                  <span
-                    class="fs-five d-flex align-items-center justify-content-center"
-                  >
-                    <i class="ph-fill ph-briefcase"></i>
-                  </span>
-                  <span class="d-none d-md-block">Pricing</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="resume.html"
-                  class="d-flex align-items-center gap-2 n5-color fs-eight p-2"
-                >
-                  <span
-                    class="fs-five d-flex align-items-center justify-content-center"
-                    ><i class="ph-fill ph-notebook fs-six"></i
-                  ></span>
-                  <span class="d-none d-md-block">Resume</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="products.html"
-                  class="d-flex align-items-center gap-2 n5-color fs-eight p-2"
-                >
-                  <span
-                    class="fs-five d-flex align-items-center justify-content-center"
-                  >
-                    <i class="ph-fill ph-shopping-bag"></i>
-                  </span>
-                  <span class="d-none d-md-block">Products</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="blog.html"
-                  class="d-flex align-items-center gap-2 n5-color fs-eight p-2"
-                >
-                  <span
-                    class="fs-five d-flex align-items-center justify-content-center"
-                  >
-                    <i class="ph-fill ph-newspaper-clipping"></i>
-                  </span>
-                  <span class="d-none d-md-block">Blog</span>
+                  <span class="d-none d-md-block">À Propos</span>
                 </a>
               </li>
               <li>
@@ -456,7 +404,7 @@
 
         <!-- color palettes btns -->
         <div class="color-switcher">
-          <button class="switcher-btn">
+          <button class="switcher-btn" aria-label="Ouvrir le sélecteur de couleurs">
             <i class="ph ph-gear-six"></i>
           </button>
           <div class="pallates box-shadow2 brn4">
@@ -464,28 +412,34 @@
               <button
                 class="color-btn bg-color1"
                 data-color="120, 171, 168"
+                aria-label="Changer la couleur principale en vert-bleu"
               ></button>
               <button
                 class="color-btn bg-color2"
                 data-color="255, 145, 251"
+                aria-label="Changer la couleur principale en rose"
               ></button>
               <button
                 class="color-btn bg-color3"
                 data-color="253, 187, 46"
+                aria-label="Changer la couleur principale en jaune"
               ></button>
             </div>
             <div class="d-flex gap-2 mt-2">
               <button
                 class="color-btn bg-color4"
                 data-color=" 82, 113, 255"
+                aria-label="Changer la couleur principale en bleu"
               ></button>
               <button
                 class="color-btn bg-color5"
                 data-color=" 0, 255, 255"
+                aria-label="Changer la couleur principale en cyan"
               ></button>
               <button
                 class="color-btn bg-color6"
                 data-color="84, 182, 137"
+                aria-label="Changer la couleur principale en vert"
               ></button>
             </div>
           </div>
@@ -500,35 +454,20 @@
               class="d-flex flex-wrap gap-10 gap-md-15 align-items-center justify-content-between"
             >
               <div class="banner-content">
-                <span class="n5-color fs-five">HI, I'M A FREELANCER</span>
+                <span class="n5-color fs-five" lang="fr">À PROPOS DE INNOCENT GBEDONOU</span>
                 <h2 class="typing-text display-one p1-color mt-2 mb-3"></h2>
-                <p class="fs-seven n5-color">
-                  I'm a software engineer specializing in scalable web apps.
-                  Explore my
-                  <a href="blog.html" class="p1-color"> blog</a>,<a
-                    href="portfolio.html"
-                    class="p1-color"
-                  >
-                    project portfolio</a
-                  >
-                  and <a href="resume.html" class="p1-color">online resume</a>.
+                <p class="fs-seven n5-color" style="line-height: 1.8; text-align: justify;">
+
+                  Innocent GBEDONOU est un entrepreneur béninois né en 1990, passionné par le design et l’ameublement.
+                  <br>
+                  À la tête de Bignon du Bénin, Innocent GBEDONOU a su transformer une passion en une aventure. Grâce à son dynamisme et à une stratégie axée sur les réseaux sociaux, notamment TikTok, où il compte plus de 250 000 abonnés, Innocent a fait connaître l'entreprise bien au-delà des frontières béninoises.                  <br>                  <br>
+                  <br>
+
                 </p>
                 <div
                   class="d-flex flex-wrap align-itmes-center gap-3 gap-md-6 mt-4 mt-md-8"
                 >
-                  <a
-                    href="portfolio.html"
-                    class="primary-btn px-3 px-md-6 py-2 py-md-4 fw-medium rounded-pill d-flex align-items-center gap-2"
-                  >
-                    <i class="ph ph-arrow-right"></i>View Portfolio
-                  </a>
-                  <a
-                    href="resume.html"
-                    class="primary-btn2 fw-medium px-3 px-md-6 py-2 py-md-4 rounded-pill d-flex align-items-center gap-2"
-                  >
-                    <img src="assets/images/resume-icon.png" alt="icon" />View
-                    Resume
-                  </a>
+
                 </div>
               </div>
 
@@ -536,320 +475,83 @@
                 <div class="user-bg"></div>
                 <div class="bg-white">
                   <img
-                    src="assets/images/user.jpg"
-                    alt="user"
+                    src="assets/images/usera.jpg"
+                    alt="Innocent GBEDONOU - Entrepreneur béninois"
                     class="user-img"
                   />
                 </div>
               </div>
             </div>
-            <!-- counter -->
-            <div
-              class="banner-counter d-flex flex-wrap flex-xl-nowrap align-items-center gap-3 gap-md-6 mt-10 mt-md-17"
-            >
+
+            <div class="container">
+              <div
+                class="d-flex flex-wrap gap-10 gap-md-15 align-items-center justify-content-between"
+              >
+              <div
+                class="banner-counter d-flex flex-wrap flex-xl-nowrap align-items-center gap-3 gap-md-6 mt-10 mt-md-17"
+              >
               <div class="d-flex align-items-center gap-2 gap-xl-4">
                 <h2 class="display-two fw-semibold p1-color">
-                  <span class="counter">5</span>
+                  <span class="counter">7+</span>
                 </h2>
                 <div class="line"></div>
-                <span class="n5-color">Years of Experience</span>
+                <span class="n5-color">Ans d’expérience</span>
               </div>
               <div class="d-flex align-items-center gap-2 gap-xl-4">
                 <h2 class="display-two fw-semibold p1-color">
-                  <span class="counter">110</span>
+                  <span class="counter">250+</span>
                 </h2>
                 <div class="line"></div>
-                <span class="n5-color">Projects Completed</span>
+                <span class="n5-color">Clients livrés</span>
               </div>
               <div class="d-flex align-items-center gap-2 gap-xl-4">
                 <h2 class="display-two fw-semibold p1-color d-flex gap-1">
-                  <span class="counter">6</span>k
+                  <span class="counter">150+</span>
                 </h2>
                 <div class="line"></div>
-                <span class="n5-color">Clients Worldwide</span>
+                <span class="n5-color">Clients Satisfaits</span>
               </div>
             </div>
           </div>
         </section>
-        <!-- banner section end -->
-
-        <!-- What I do section start -->
-        <section class="pt-120 pb-120">
-          <div class="container">
-            <div
-              class="d-flex gap-3 flex-wrap flex-xxl-nowrap justify-content-between align-items-end pb-60"
-            >
-              <div data-aos="zoom-in-left" class="section-heading">
-                <div class="d-flex align-items-center gap-2">
-                  <div class="title-line"></div>
-                  <h2 class="display-four n5-color fw-semibold">What I do</h2>
-                </div>
-                <p class="fs-seven n4-color mt-2 mt-md-4">
-                  I have more than 10 years' experience building software for
-                  clients all over the world. Below is a quick overview of my
-                  main technical skill sets and technologies I use. Want to find
-                  out more about my experience? Check out my 
-                  <a href="resume.html" class="p1-color">online resume</a> and
-                  <a href="portfolio.html" class="p1-color">project portfolio</a
-                  >.
-                </p>
-              </div>
-              <a
-                href="price.html"
-                data-aos="zoom-in-right"
-                class="primary-btn fw-medium px-3 px-md-6 py-2 py-md-4 rounded-pill d-flex align-items-center gap-2 h-100 text-nowrap"
-              >
-                <i class="ph ph-arrow-right"></i>Services & Pricing
-              </a>
+        <!-- Histoire & Fondateur section -->
+        <div class="container-fluid mt-8 mt-md-15 px-4 px-md-5">
+          <div data-aos="zoom-in" class="section-heading">
+            <div class="d-flex align-items-center gap-2 mb-4">
+              <div class="title-line"></div>
+              <h2 class="display-four n5-color fw-semibold">Histoire</h2>
             </div>
-
-            <div class="row g-3 g-md-6">
-              <div
-                data-aos="fade-up"
-                data-aos-duration="500"
-                class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3"
-              >
-                <div class="service-card px-4 px-lg-8 py-5 py-lg-10">
-                  <img
-                    src="assets/images/js.png"
-                    alt="js"
-                    class="service-icon"
-                  />
-                  <h4
-                    class="fs-six n5-color fw-medium mt-3 mt-md-6 mb-2 mb-md-3"
-                  >
-                    Vanilla JavaScript
-                  </h4>
-                  <p class="fs-seven n4-color">
-                    List skills and technologies here. Customize as needed.
-                    Built on HTML5, Sass, and Bootstrap 5.
-                  </p>
-                </div>
-              </div>
-              <div
-                data-aos="fade-up"
-                data-aos-duration="600"
-                class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3"
-              >
-                <div class="service-card px-4 px-lg-8 py-5 py-lg-10">
-                  <div class="d-flex align-items-center gap-3">
-                    <img
-                      src="assets/images/angular.png"
-                      alt="angular"
-                      class="service-icon"
-                    />
-                    <img
-                      src="assets/images/react.png"
-                      alt="react"
-                      class="service-icon"
-                    />
-                    <img
-                      src="assets/images/vue.png"
-                      alt="vue"
-                      class="service-icon"
-                    />
-                  </div>
-                  <h4
-                    class="fs-six n5-color fw-medium mt-3 mt-md-6 mb-2 mb-md-3"
-                  >
-                    Angular, React & Vue
-                  </h4>
-                  <p class="fs-seven n4-color">
-                    List skills and technologies here. Customize as needed.
-                    Built on HTML5, Sass, and Bootstrap 5.
-                  </p>
-                </div>
-              </div>
-              <div
-                data-aos="fade-up"
-                data-aos-duration="700"
-                class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3"
-              >
-                <div class="service-card px-4 px-lg-8 py-5 py-lg-10">
-                  <img
-                    src="assets/images/node.png"
-                    alt="node"
-                    class="service-icon"
-                  />
-                  <h4
-                    class="fs-six n5-color fw-medium mt-3 mt-md-6 mb-2 mb-md-3"
-                  >
-                    Node.js
-                  </h4>
-                  <p class="fs-seven n4-color">
-                    List skills and technologies here. Customize as needed.
-                    Built on HTML5, Sass, and Bootstrap 5.
-                  </p>
-                </div>
-              </div>
-              <div
-                data-aos="fade-up"
-                data-aos-duration="800"
-                class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3"
-              >
-                <div class="service-card px-4 px-lg-8 py-5 py-lg-10">
-                  <img
-                    src="assets/images/python.png"
-                    alt="python"
-                    class="service-icon"
-                  />
-                  <h4
-                    class="fs-six n5-color fw-medium mt-3 mt-md-6 mb-2 mb-md-3"
-                  >
-                    Python & Django
-                  </h4>
-                  <p class="fs-seven n4-color">
-                    List skills and technologies here. Customize as needed.
-                    Built on HTML5, Sass, and Bootstrap 5.
-                  </p>
-                </div>
-              </div>
-              <div
-                data-aos="fade-up"
-                data-aos-duration="500"
-                class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3"
-              >
-                <div class="service-card px-4 px-lg-8 py-5 py-lg-10">
-                  <img
-                    src="assets/images/php.png"
-                    alt="php"
-                    class="service-icon"
-                  />
-                  <h4
-                    class="fs-six n5-color fw-medium mt-3 mt-md-6 mb-2 mb-md-3"
-                  >
-                    PHP
-                  </h4>
-                  <p class="fs-seven n4-color">
-                    List skills and technologies here. Customize as needed.
-                    Built on HTML5, Sass, and Bootstrap 5.
-                  </p>
-                </div>
-              </div>
-              <div
-                data-aos="fade-up"
-                data-aos-duration="600"
-                class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3"
-              >
-                <div class="service-card px-4 px-lg-8 py-5 py-lg-10">
-                  <div class="d-flex gap-3">
-                    <img
-                      src="assets/images/npm.png"
-                      alt="npm"
-                      class="service-icon"
-                    />
-                    <img
-                      src="assets/images/gulp.png"
-                      alt="gulp"
-                      class="service-icon"
-                    />
-                    <img
-                      src="assets/images/grunt.png"
-                      alt="grunt"
-                      class="service-icon"
-                    />
-                  </div>
-                  <h4
-                    class="fs-six n5-color fw-medium mt-3 mt-md-6 mb-2 mb-md-3"
-                  >
-                    npm, Gulp & Grunt
-                  </h4>
-                  <p class="fs-seven n4-color">
-                    List skills and technologies here. Customize as needed.
-                    Built on HTML5, Sass, and Bootstrap 5.
-                  </p>
-                </div>
-              </div>
-              <div
-                data-aos="fade-up"
-                data-aos-duration="700"
-                class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3"
-              >
-                <div class="service-card px-4 px-lg-8 py-5 py-lg-10">
-                  <div class="d-flex gap-3">
-                    <img
-                      src="assets/images/html.png"
-                      alt="html"
-                      class="service-icon"
-                    />
-                    <img
-                      src="assets/images/css.png"
-                      alt="css"
-                      class="service-icon"
-                    />
-                  </div>
-                  <h4
-                    class="fs-six n5-color fw-medium mt-3 mt-md-6 mb-2 mb-md-3"
-                  >
-                    HTML & CSS
-                  </h4>
-                  <p class="fs-seven n4-color">
-                    List skills and technologies here. Customize as needed.
-                    Built on HTML5, Sass, and Bootstrap 5.
-                  </p>
-                </div>
-              </div>
-              <div
-                data-aos="fade-up"
-                data-aos-duration="800"
-                class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3"
-              >
-                <div class="service-card px-4 px-lg-8 py-5 py-lg-10">
-                  <div class="d-flex gap-3">
-                    <img
-                      src="assets/images/sass.png"
-                      alt="sass"
-                      class="service-icon"
-                    />
-                    <img
-                      src="assets/images/less.png"
-                      alt="less"
-                      class="service-icon"
-                    />
-                  </div>
-                  <h4
-                    class="fs-six n5-color fw-medium mt-3 mt-md-6 mb-2 mb-md-3"
-                  >
-                    Sass & LESS
-                  </h4>
-                  <p class="fs-seven n4-color">
-                    List skills and technologies here. Customize as needed.
-                    Built on HTML5, Sass, and Bootstrap 5.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- What I do section end -->
-
-        <!-- next project section start -->
-        <section class="next-project pt-120 pb-120">
-          <div
-            class="container d-flex gap-3 gap-md-6 flex-wrap justify-content-between align-items-center"
-          >
-            <div data-aos="zoom-in-left" class="next-project-content">
-              <h3 class="display-four n11-color fw-semibold mb-2 mb-md-4">
-                Let’s Work together on your next Project
-              </h3>
-              <p class="fs-seven n11-color">
-                I am available for freelance projects. Hire me and get your
-                project done.
+            <div>
+              <p class="fs-seven n5-color" style="line-height: 1.8; text-align: justify; max-width:1200px; margin:auto;">
+                <strong>Innocent GBEDONOU, Entrepreneur</strong><br><br>
+                <strong>Innocent GBEDONOU</strong> est un entrepreneur béninois né en 1990, passionné par le design et l’ameublement.
+                Bien avant la fondation de son entreprise <strong>Bignon du Bénin</strong>, il a nourri sa soif artistique
+                en lançant sa carrière musicale.
+                À l’âge de 13 ans, il s’est distingué au sein de la chorale de son église à Djeffa, dans la commune de Sèmè-Podji.
+                Grâce à son talent, il a eu le privilège de performer lors d’activités culturelles dans plusieurs lycées et collèges du Bénin,
+                aux côtés d’autres artistes talentueux.
+                Animé par cette passion, il a sorti plusieurs albums et s’est bâti une excellente réputation artistique sous le pseudo
+                <strong>Drip Innocente</strong>.<br><br>
+                Cependant, cette vocation musicale ne l’a pas détourné de l’entrepreneuriat.
+                Convaincu qu’il est possible d’offrir des produits à la fois accessibles, tendances et de qualité,
+                il crée <strong>Bignon du Bénin</strong> après avoir brillamment redressé une entreprise de commerce d’ustensiles de cuisine
+                et de décoration intérieure.
+                En 2021, il lance officiellement sa marque.<br><br>
+                Son concept novateur repose sur des magasins proposant un large choix de meubles et d’objets de décoration
+                inspirés des tendances internationales et de la culture ancestrale, accessibles à tous les budgets.
+                Grâce à une stratégie ambitieuse, il ouvre rapidement plusieurs points de vente et bâtit une marque forte,
+                reconnue pour la diversité de ses collections et la qualité de son service client.<br><br>
+                En quelques années, <strong>Innocent Gbedonou</strong> transforme <strong>Bignon du Bénin</strong> en une entreprise de
+                renommée régionale, employant des dizaines de personnes et réalisant le rêve de centaines, voire de milliers de clients.
+                Aujourd’hui, il est indéniablement un modèle dans la catégorie <strong>“jeune entrepreneur”</strong>,
+                inspirant la jeunesse du Bénin et de toute l’Afrique.
               </p>
             </div>
-            <a
-              data-aos="zoom-in-right"
-              href="contact.html"
-              class="primary-btn fw-medium px-3 px-md-6 py-2 py-md-4 rounded-pill d-flex align-items-center gap-2 h-100"
-            >
-              <i class="ph ph-arrow-right"></i>Let’s get in touch
-            </a>
           </div>
-        </section>
-        <!-- next project section end -->
+        </div>
 
-        <!-- Featured Projects section start -->
-        <section class="projects-section pt-120 pb-120 br-bottom-n3">
+         <!-- Latest Blog Posts section start -->
+        <section class="pt-120 pb-120">
           <div class="container">
             <div
               class="d-flex gap-3 flex-wrap flex-xxl-nowrap justify-content-between align-items-end mb-8 mb-md-15"
@@ -857,284 +559,70 @@
               <div data-aos="zoom-in-left" class="section-heading">
                 <div class="d-flex align-items-center gap-2">
                   <div class="title-line"></div>
-                  <h2 class="display-four n5-color fw-semibold">
-                    Featured Projects
-                  </h2>
+                  <h2 class="display-four n5-color fw-semibold">Ce que nous faisons</h2>
                 </div>
-                <p class="fs-seven n4-color mt-2 mt-md-4">
-                  My step-by-step guide ensures a smooth project journey, from
-                  the initial consultation to the final delivery. I take care of
-                  every detail, allowing you to focus on what you do best.
-                </p>
               </div>
-              <a
-                data-aos="zoom-in-right"
-                href="portfolio.html"
-                class="primary-btn fw-medium px-3 px-md-6 py-2 py-md-4 rounded-pill d-flex align-items-center gap-2 h-100 text-nowrap"
+            </div>
+            <div class="row g-6">
+              <div
+                data-aos="fade-up"
+                data-aos-duration="700"
+                class="col-sm-6 col-xxl-4"
               >
-                <i class="ph ph-arrow-right"></i>View Portfolio
-              </a>
-            </div>
-
-            <div class="row g-6 g-md-8">
-              <div data-aos="fade-up" data-aos-duration="800" class="col-xl-6">
-                <div class="project-card">
-                  <a href="portfolio_details.html" class="thumb d-block">
-                    <div class="post-thumb">
-                      <div class="post-thumb-inner">
-                        <img
-                          src="assets/images/project1.png"
-                          alt="..."
-                          class="w-100 p-2"
-                        />
-                      </div>
-                    </div>
-                    <div class="post-thumb">
-                      <div class="post-thumb-inner">
-                        <img
-                          src="assets/images/project1.png"
-                          alt="..."
-                          class="w-100 p-2"
-                        />
-                      </div>
-                    </div>
-                  </a>
-
-                  <div
-                    class="d-flex justify-content-between gap-2 align-items-center pt-4 pt-md-8 px-3 px-md-6"
-                  >
-                    <div>
-                      <div class="d-flex flex-wrap gap-2 align-items-center">
-                        <a
-                          href="javascript:void(0)"
-                          class="n5-color fs-nine px-2 px-md-4 py-1 py-md-2 brn3 rounded-pill fw-medium"
-                          >React JS</a
-                        >
-                        <a
-                          href="javascript:void(0)"
-                          class="n5-color fs-nine px-2 px-md-4 py-1 py-md-2 brn3 rounded-pill fw-medium"
-                          >gsap</a
-                        >
-                        <a
-                          href="javascript:void(0)"
-                          class="n5-color fs-nine px-2 px-md-4 py-1 py-md-2 brn3 rounded-pill fw-medium"
-                          >Web Development</a
-                        >
-                      </div>
-                      <a
-                        href="portfolio_details.html"
-                        class="project-title fs-five fw-semibold n5-color mt-3 mt-md-5 d-block"
-                      >
-                        Crypto Website Development for DeFi X
-                      </a>
-                    </div>
-                    <a
-                      href="portfolio_details.html"
-                      class="project-link d-flex align-items-center justify-content-center flex-shrink-0"
-                    >
-                      <i class="ph-bold ph-arrow-up-right n5-color"></i>
-                    </a>
+                <a href="blog_details.html" class="blog-card">
+                  <div class="blog-img rounded-3 overflow-hidden">
+                    <img
+                      src="assets/images/blog_a2.png"
+                      alt="Gala des Entrepreneurs et Influenceurs de Porto-Novo"
+                      class="rounded-3 w-100"
+                    />
                   </div>
-                </div>
-              </div>
-              <div data-aos="fade-up" data-aos-duration="800" class="col-xl-6">
-                <div class="project-card">
-                  <a href="portfolio_details.html" class="thumb d-block">
-                    <div class="post-thumb">
-                      <div class="post-thumb-inner">
-                        <img
-                          src="assets/images/project2.png"
-                          alt="..."
-                          class="w-100 p-2"
-                        />
-                      </div>
+                  <div class="pt-4 pt-md-8 px-3 px-md-5">
+                    <div class="d-flex align-items-center gap-3 mb-2 mb-md-3">
+                      <span class="n4-color fs-eight">30 Aout 2025 </span>
+                      <span class="p1-color fs-eight">/</span>
+                      <span class="n4-color fs-eight">Soirée</span>
                     </div>
-                    <div class="post-thumb">
-                      <div class="post-thumb-inner">
-                        <img
-                          src="assets/images/project2.png"
-                          alt="..."
-                          class="w-100 p-2"
-                        />
-                      </div>
-                    </div>
-                  </a>
-
-                  <div
-                    class="d-flex justify-content-between gap-2 align-items-center pt-4 pt-md-8 px-3 px-md-6"
-                  >
-                    <div>
-                      <div class="d-flex gap-2 align-items-center">
-                        <a
-                          href="javascript:void(0)"
-                          class="n5-color fs-nine px-2 px-md-4 py-1 py-md-2 brn3 rounded-pill fw-medium"
-                          >React JS</a
-                        >
-                        <a
-                          href="javascript:void(0)"
-                          class="n5-color fs-nine px-2 px-md-4 py-1 py-md-2 brn3 rounded-pill fw-medium"
-                          >gsap</a
-                        >
-                        <a
-                          href="javascript:void(0)"
-                          class="n5-color fs-nine px-2 px-md-4 py-1 py-md-2 brn3 rounded-pill fw-medium"
-                          >Web Development</a
-                        >
-                      </div>
-                      <a
-                        href="portfolio_details.html"
-                        class="project-title fs-five fw-semibold n5-color mt-3 mt-md-5 d-block"
-                      >
-                        Salesforce CRM - Invoice Management
-                      </a>
-                    </div>
-                    <a
-                      href="portfolio_details.html"
-                      class="project-link d-flex align-items-center justify-content-center flex-shrink-0"
-                    >
-                      <i class="ph-bold ph-arrow-up-right n5-color"></i>
-                    </a>
+                    <h4 class="blog-title fs-five n5-color fw-semibold">
+                      Gala des Entrepreneurs et Influenceurs de Porto-Novo
+                    </h4>
                   </div>
-                </div>
-              </div>
-              <div data-aos="fade-up" data-aos-duration="700" class="col-xl-6">
-                <div class="project-card">
-                  <a href="portfolio_details.html" class="thumb d-block">
-                    <div class="post-thumb">
-                      <div class="post-thumb-inner">
-                        <img
-                          src="assets/images/project3.png"
-                          alt="..."
-                          class="w-100 p-2"
-                        />
-                      </div>
-                    </div>
-                    <div class="post-thumb">
-                      <div class="post-thumb-inner">
-                        <img
-                          src="assets/images/project3.png"
-                          alt="..."
-                          class="w-100 p-2"
-                        />
-                      </div>
-                    </div>
-                  </a>
-
-                  <div
-                    class="d-flex justify-content-between gap-2 align-items-center pt-4 pt-md-8 px-3 px-md-6"
-                  >
-                    <div>
-                      <div class="d-flex gap-2 align-items-center">
-                        <a
-                          href="javascript:void(0)"
-                          class="n5-color fs-nine px-2 px-md-4 py-1 py-md-2 brn3 rounded-pill fw-medium"
-                          >React JS</a
-                        >
-                        <a
-                          href="javascript:void(0)"
-                          class="n5-color fs-nine px-2 px-md-4 py-1 py-md-2 brn3 rounded-pill fw-medium"
-                          >gsap</a
-                        >
-                        <a
-                          href="javascript:void(0)"
-                          class="n5-color fs-nine px-2 px-md-4 py-1 py-md-2 brn3 rounded-pill fw-medium"
-                          >Web Development</a
-                        >
-                      </div>
-                      <a
-                        href="portfolio_details.html"
-                        class="project-title fs-five fw-semibold n5-color mt-3 mt-md-5 d-block"
-                      >
-                        Car Rental App
-                      </a>
-                    </div>
-                    <a
-                      href="portfolio_details.html"
-                      class="project-link d-flex align-items-center justify-content-center flex-shrink-0"
-                    >
-                      <i class="ph-bold ph-arrow-up-right n5-color"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div data-aos="fade-up" data-aos-duration="800" class="col-xl-6">
-                <div class="project-card">
-                  <a href="portfolio_details.html" class="thumb d-block">
-                    <div class="post-thumb">
-                      <div class="post-thumb-inner">
-                        <img
-                          src="assets/images/project4.png"
-                          alt="..."
-                          class="w-100 p-2"
-                        />
-                      </div>
-                    </div>
-                    <div class="post-thumb">
-                      <div class="post-thumb-inner">
-                        <img
-                          src="assets/images/project4.png"
-                          alt="..."
-                          class="w-100 p-2"
-                        />
-                      </div>
-                    </div>
-                  </a>
-
-                  <div
-                    class="d-flex justify-content-between gap-2 align-items-center pt-4 pt-md-8 px-3 px-md-6"
-                  >
-                    <div>
-                      <div class="d-flex gap-2 align-items-center">
-                        <a
-                          href="javascript:void(0)"
-                          class="n5-color fs-nine px-2 px-md-4 py-1 py-md-2 brn3 rounded-pill fw-medium"
-                          >React JS</a
-                        >
-                        <a
-                          href="javascript:void(0)"
-                          class="n5-color fs-nine px-2 px-md-4 py-1 py-md-2 brn3 rounded-pill fw-medium"
-                          >gsap</a
-                        >
-                        <a
-                          href="javascript:void(0)"
-                          class="n5-color fs-nine px-2 px-md-4 py-1 py-md-2 brn3 rounded-pill fw-medium"
-                          >Web Development</a
-                        >
-                      </div>
-                      <a
-                        href="portfolio_details.html"
-                        class="project-title fs-five fw-semibold n5-color mt-3 mt-md-5 d-block"
-                      >
-                        Financial management
-                      </a>
-                    </div>
-                    <a
-                      href="portfolio_details.html"
-                      class="project-link d-flex align-items-center justify-content-center flex-shrink-0"
-                    >
-                      <i class="ph-bold ph-arrow-up-right n5-color"></i>
-                    </a>
-                  </div>
-                </div>
+                </a>
               </div>
             </div>
+        </section>
+        <!-- Latest Blog Posts section end -->
+        <!-- next project section start -->
+        <section class="next-project pt-120 pb-120">
+          <div
+            class="container d-flex gap-3 gap-md-6 flex-wrap justify-content-between align-items-center"
+          >
+            <div data-aos="zoom-in-left" class="next-project-content">
+              <h3 class="display-four n11-color fw-semibold mb-2 mb-md-4">
+                Collaborons ensemble pour réussir
+              </h3>
+              <p class="fs-seven n11-color">
+                M. Innocent GBEDONOU à votre service pour tous vos projets d’ameublement.
+                Faites-lui confiance pour créer des meubles uniques qui valorisent votre intérieur.
+              </p>
+            </div>
+            <a
+              data-aos="zoom-in-right"
+              href="contact.html"
+              class="primary-btn fw-medium px-3 px-md-6 py-2 py-md-4 rounded-pill d-flex align-items-center gap-2 h-100"
+            >
+              <i class="ph ph-arrow-right"></i>Entrons en contact
+            </a>
           </div>
         </section>
-        <!-- Featured Projects section end -->
-
         <!-- Testimonials section start -->
         <section class="pt-120 pb-120 br-bottom-n3">
           <div class="container">
             <div data-aos="zoom-in-up" class="section-heading">
               <div class="d-flex align-items-center gap-2">
                 <div class="title-line"></div>
-                <h2 class="display-four n5-color fw-semibold">Testimonials</h2>
+                <h2 class="display-four n5-color fw-semibold">Témoignages</h2>
               </div>
-              <p class="fs-seven n4-color mt-2 mt-md-4">
-                See how I've helped our clients succeed. IT’s a highly
-                Customizable,creative, modern, visually stunning and Bootstrap5
-                HTML5 Template.
-              </p>
             </div>
             <div class="mt-8 mt-md-15 overflow-x-hidden">
               <div class="swiper testimonial_slider">
@@ -1151,22 +639,16 @@
                         <i class="ph-fill ph-star y1-color fs-six"></i>
                       </div>
                       <p class="n4-color fs-six">
-                        “ I highly recommend Portfolify to anyone looking for a
-                        high-quality best Bootstrap theme.”
+                        “Au-delà de ses produits de qualité, ce qui m’a marquée chez M. Gbèdonou, c’est sa simplicité. Il prend toujours le temps d’écouter, de sourire,
+                        de rassurer. On sent que c’est quelqu’un qui respecte profondément les gens, peu importe leur statut.”
                       </p>
                       <div class="d-flex gap-3 align-items-center mt-4 mt-md-7">
-                        <img
-                          src="assets/images/buyer1.png"
-                          alt="testimonial"
-                          class="testimonial_img"
-                        />
-
                         <div>
                           <span class="fs-eight d-block n5-color"
-                            >Esther Howard
+                            >Clémence A
                           </span>
                           <span class="fs-nine d-block n5-color"
-                            >Australia
+                            >Cliente fidèle
                           </span>
                         </div>
                       </div>
@@ -1184,21 +666,15 @@
                         <i class="ph-fill ph-star y1-color fs-six"></i>
                       </div>
                       <p class="n4-color fs-six">
-                        “Best Bootstrap template ever: easy to customize,
-                        feature-rich, and meets all our needs.”
+                        “J’ai rencontré Innocent lors d’une collaboration et j’ai découvert un homme passionné, humble et très ouvert. Il ne parle pas seulement business, il aime échanger
+                        sur la vie, la musique, la culture. On voit son passé d’artiste dans sa créativité et sa manière d’inspirer les autres.”
                       </p>
                       <div class="d-flex gap-3 align-items-center mt-4 mt-md-7">
-                        <img
-                          src="assets/images/buyer2.png"
-                          alt="testimonial"
-                          class="testimonial_img"
-                        />
-
                         <div>
                           <span class="fs-eight d-block n5-color"
-                            >Cameron Williamson</span
+                            >Jean-Marc </span
                           >
-                          <span class="fs-nine d-block n5-color">Brazil </span>
+                          <span class="fs-nine d-block n5-color">Entrepreneur local </span>
                         </div>
                       </div>
                     </div>
@@ -1215,20 +691,15 @@
                         <i class="ph-fill ph-star y1-color fs-six"></i>
                       </div>
                       <p class="n4-color fs-six">
-                        “Portfolify is the perfect theme for businesses that
-                        want to create a stylish and functional website.”
+                        “Ce qui m’impressionne toujours, c’est sa disponibilité. Même en tant que dirigeant, il n’hésite pas à répondre lui-même à un client,
+                        avec respect et patience. C’est rare de voir quelqu’un de son rang garder autant d’humanité.”
                       </p>
                       <div class="d-flex gap-3 align-items-center mt-4 mt-md-7">
-                        <img
-                          src="assets/images/buyer3.png"
-                          alt="testimonial"
-                          class="testimonial_img"
-                        />
                         <div>
                           <span class="fs-eight d-block n5-color"
-                            >Robert Fox
+                            >Sandra K
                           </span>
-                          <span class="fs-nine d-block n5-color">China </span>
+                          <span class="fs-nine d-block n5-color">Cliente Béninoise </span>
                         </div>
                       </div>
                     </div>
@@ -1245,21 +716,15 @@
                         <i class="ph-fill ph-star y1-color fs-six"></i>
                       </div>
                       <p class="n4-color fs-six">
-                        “Best Bootstrap template ever: easy to customize,
-                        feature-rich, and meets all our needs.”
+                        “Innocent Gbèdonou est une personne qui inspire confiance. Quand il dit quelque chose, il le fait. C’est quelqu’un de droit,
+                        avec des valeurs solides. Travailler avec lui m’a montré qu’on peut réussir sans trahir ses principes.”
                       </p>
                       <div class="d-flex gap-3 align-items-center mt-4 mt-md-7">
-                        <img
-                          src="assets/images/buyer4.png"
-                          alt="testimonial"
-                          class="testimonial_img"
-                        />
-
                         <div>
                           <span class="fs-eight d-block n5-color"
-                            >Jenny Wilson</span
+                            >Richard D</span
                           >
-                          <span class="fs-nine d-block n5-color">Russia</span>
+                          <span class="fs-nine d-block n5-color">Partenaire commercial</span>
                         </div>
                       </div>
                     </div>
@@ -1276,22 +741,16 @@
                         <i class="ph-fill ph-star y1-color fs-six"></i>
                       </div>
                       <p class="n4-color fs-six">
-                        “ I highly recommend Portfolify to anyone looking for a
-                        high-quality best Bootstrap theme.”
+                        “Je ne suis pas une cliente régulière, mais la fois où j’ai eu affaire à lui directement,
+                        j’ai senti une personne chaleureuse, respectueuse et attentionnée. Il a ce don de mettre tout le monde à l’aise, même ceux qui le rencontrent pour la première fois.”
                       </p>
                       <div class="d-flex gap-3 align-items-center mt-4 mt-md-7">
-                        <img
-                          src="assets/images/buyer1.png"
-                          alt="testimonial"
-                          class="testimonial_img"
-                        />
-
                         <div>
                           <span class="fs-eight d-block n5-color"
-                            >Esther Howard
+                            >Nadine E
                           </span>
                           <span class="fs-nine d-block n5-color"
-                            >Australia
+                            >Cliente occasionnelle
                           </span>
                         </div>
                       </div>
@@ -1310,20 +769,15 @@
                         <i class="ph-fill ph-star y1-color fs-six"></i>
                       </div>
                       <p class="n4-color fs-six">
-                        “Portfolify is the perfect theme for businesses that
-                        want to create a stylish and functional website.”
+                        “Ce que j’apprécie chez M. Gbèdonou, c’est son côté visionnaire. Mais plus encore, c’est sa modestie.
+                        Il ne se vante pas, il agit. C’est un homme qui garde les pieds sur terre malgré le succès, et c’est pour ça que beaucoup le respectent.”
                       </p>
                       <div class="d-flex gap-3 align-items-center mt-4 mt-md-7">
-                        <img
-                          src="assets/images/buyer3.png"
-                          alt="testimonial"
-                          class="testimonial_img"
-                        />
                         <div>
                           <span class="fs-eight d-block n5-color"
-                            >Robert Fox
+                            >Alain K
                           </span>
-                          <span class="fs-nine d-block n5-color">China </span>
+                          <span class="fs-nine d-block n5-color">Client depuis plusieurs années </span>
                         </div>
                       </div>
                     </div>
@@ -1340,129 +794,32 @@
         </section>
         <!-- Testimonials section end -->
 
-        <!-- Latest Blog Posts section start -->
-        <section class="pt-120 pb-120">
-          <div class="container">
-            <div
-              class="d-flex gap-3 flex-wrap flex-xxl-nowrap justify-content-between align-items-end mb-8 mb-md-15"
-            >
-              <div data-aos="zoom-in-left" class="section-heading">
-                <div class="d-flex align-items-center gap-2">
-                  <div class="title-line"></div>
-                  <h2 class="display-four n5-color fw-semibold">
-                    Latest Blog Posts
-                  </h2>
-                </div>
-                <p class="fs-seven n4-color mt-2 mt-md-4">
-                  More than 1500+ agencies using Portfolify
-                </p>
-              </div>
-              <a
-                data-aos="zoom-in-right"
-                href="blog.html"
-                class="primary-btn fw-medium px-3 px-md-6 py-2 py-md-4 rounded-pill text-nowrap"
-              >
-                See All Articles
-              </a>
-            </div>
-            <div class="row g-6">
-              <div
-                data-aos="fade-up"
-                data-aos-duration="700"
-                class="col-sm-6 col-xxl-4"
-              >
-                <a href="blog_details.html" class="blog-card">
-                  <div class="blog-img rounded-3 overflow-hidden">
-                    <img
-                      src="assets/images/blog1.png"
-                      alt="blog"
-                      class="rounded-3 w-100"
-                    />
-                  </div>
-                  <div class="pt-4 pt-md-8 px-3 px-md-5">
-                    <div class="d-flex align-items-center gap-3 mb-2 mb-md-3">
-                      <span class="n4-color fs-eight">March 18, 2024</span>
-                      <span class="p1-color fs-eight">/</span>
-                      <span class="n4-color fs-eight">Articles</span>
-                    </div>
-                    <h4 class="blog-title fs-five n5-color fw-semibold">
-                      7 Great Web Development Languages to Learn this Year
-                    </h4>
-                  </div>
-                </a>
-              </div>
-              <div
-                data-aos="fade-up"
-                data-aos-duration="800"
-                class="col-sm-6 col-xxl-4"
-              >
-                <a href="blog_details.html" class="blog-card">
-                  <div class="blog-img rounded-3 overflow-hidden">
-                    <img
-                      src="assets/images/blog2.png"
-                      alt="blog"
-                      class="rounded-3 w-100"
-                    />
-                  </div>
-                  <div class="pt-4 pt-md-8 px-3 px-md-5">
-                    <div class="d-flex align-items-center gap-3 mb-2 mb-md-3">
-                      <span class="n4-color fs-eight">March 18, 2024</span>
-                      <span class="p1-color fs-eight">/</span>
-                      <span class="n4-color fs-eight">Tutorials</span>
-                    </div>
-                    <h4 class="blog-title fs-five n5-color fw-semibold">
-                      How to Optimize your Website for Better Performance
-                    </h4>
-                  </div>
-                </a>
-              </div>
-              <div
-                data-aos="fade-up"
-                data-aos-duration="900"
-                class="col-sm-6 col-xxl-4"
-              >
-                <a href="blog_details.html" class="blog-card">
-                  <div class="blog-img rounded-3 overflow-hidden">
-                    <img
-                      src="assets/images/blog3.png"
-                      alt="blog"
-                      class="rounded-3 w-full"
-                    />
-                  </div>
-                  <div class="pt-4 pt-md-8 px-3 px-md-5">
-                    <div class="d-flex align-items-center gap-3 mb-2 mb-md-3">
-                      <span class="n4-color fs-eight">March 18, 2024</span>
-                      <span class="p1-color fs-eight">/</span>
-                      <span class="n4-color fs-eight">Articles</span>
-                    </div>
-                    <h4 class="blog-title fs-five n5-color fw-semibold">
-                      8 Tips to Improve your Web Development Skills in 2024
-                    </h4>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- Latest Blog Posts section end -->
+
 
         <!-- footer section start -->
         <section
           class="container d-flex flex-wrap gap-3 gap-md-6 justify-content-center justify-content-sm-between align-items-center pb-4 pb-md-8 text-center mb-16 mb-lg-0"
         >
-          <span class="fs-eight fw-medium n5-color order-sm-2"
-            >Designed by
-            <a
-              href="https://themeforest.net/user/uiaxis"
-              class="fs-eight fw-medium n5-color"
-              >UIAXIS</a
-            ></span
-          >
+          <div class="d-flex flex-column gap-2 align-items-center">
+            <span class="fs-eight fw-medium n5-color order-sm-2"
+              >Réalisé par
+              <a
+                href="https://generationimpact3.0.com"
+                class="fs-eight fw-medium n5-color"
+                >Génération Impact 3.0</a
+              ></span
+            >
+            <div class="d-flex gap-3 fs-nine n4-color">
+              <a href="privacy-policy.html" class="n4-color">Politique de confidentialité</a>
+              <span>|</span>
+              <a href="terms-of-service.html" class="n4-color">Conditions d'utilisation</a>
+            </div>
+          </div>
           <span class="fs-eight fw-medium n5-color order-sm-1"
             >Copyright © 2024
-            <a href="index-2.html" class="fs-eight fw-medium n5-color"
-              >Portfolify</a
-            >. All Rights Reserved.</span
+            <a href="index.html" class="fs-eight fw-medium n5-color"
+              >BIGNON DU BENIN</a
+            >. Tous droits réservés.</span
           >
         </section>
         <!-- footer section end -->
@@ -1474,14 +831,14 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/type-word.js"></script>
     <!-- swiper js  -->
-    <script src="cdn.jsdelivr.net/npm/swiper%4011/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- email js  -->
     <script
       type="text/javascript"
-      src="cdn.jsdelivr.net/npm/%40emailjs/browser%404/dist/email.min.js"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
     ></script>
     <!-- aos -->
-    <script src="unpkg.com/aos%403.0.0-beta.6/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.js"></script>
   </body>
 
 </html>

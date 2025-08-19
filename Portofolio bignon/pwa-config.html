@@ -1,0 +1,78 @@
+<!-- Configuration PWA (Application Web Progressive) -->
+<!-- Ajoutez ces éléments dans le <head> de chaque page HTML pour activer les fonctionnalités PWA -->
+
+<!-- Manifeste PWA -->
+<link rel="manifest" href="manifest.json" />
+
+<!-- Icônes pour iOS -->
+<link rel="apple-touch-icon" href="assets/images/logo.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="assets/images/logo.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo.png" />
+<link rel="apple-touch-icon" sizes="167x167" href="assets/images/logo.png" />
+
+<!-- Icônes pour Android -->
+<link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo.png" />
+
+<!-- Couleurs du thème -->
+<meta name="theme-color" content="#78aba8" />
+<meta name="msapplication-TileColor" content="#78aba8" />
+<meta name="msapplication-navbutton-color" content="#78aba8" />
+
+<!-- Service Worker pour PWA -->
+<script>
+// Enregistrement du Service Worker
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js')
+      .then(function(registration) {
+        console.log('ServiceWorker enregistré avec succès:', registration.scope);
+      })
+      .catch(function(error) {
+        console.log('Échec de l\'enregistrement du ServiceWorker:', error);
+      });
+  });
+}
+
+// Installation PWA
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  
+  // Afficher un bouton d'installation personnalisé si nécessaire
+  const installButton = document.getElementById('install-pwa');
+  if (installButton) {
+    installButton.style.display = 'block';
+    installButton.addEventListener('click', () => {
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === 'accepted') {
+          console.log('Utilisateur a accepté l\'installation PWA');
+        }
+        deferredPrompt = null;
+      });
+    });
+  }
+});
+
+// Gestion de l'installation PWA
+window.addEventListener('appinstalled', (evt) => {
+  console.log('Application installée avec succès');
+});
+</script>
+
+<!-- Instructions d'utilisation -->
+<!-- 
+1. Ajoutez ces éléments dans le <head> de chaque page HTML
+2. Assurez-vous que le fichier manifest.json existe
+3. Créez un fichier sw.js (Service Worker) si vous voulez des fonctionnalités offline
+4. Testez l'installation PWA sur mobile et desktop
+5. Vérifiez que les icônes s'affichent correctement
+
+Fonctionnalités PWA activées :
+- Installation sur l'écran d'accueil
+- Mode hors ligne (avec Service Worker)
+- Apparence d'application native
+- Notifications push (optionnel)
+-->

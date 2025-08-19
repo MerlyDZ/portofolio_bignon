@@ -1,0 +1,144 @@
+<!-- Bannière de Cookies RGPD -->
+<div id="cookie-banner" class="cookie-banner" style="display: none;">
+  <div class="cookie-content">
+    <div class="cookie-text">
+      <h4>🍪 Politique des Cookies</h4>
+      <p>Nous utilisons des cookies pour améliorer votre expérience sur notre site. En continuant à naviguer, vous acceptez notre utilisation des cookies.</p>
+    </div>
+    <div class="cookie-buttons">
+      <button id="accept-cookies" class="cookie-btn accept">Accepter</button>
+      <button id="reject-cookies" class="cookie-btn reject">Refuser</button>
+      <a href="privacy-policy.html" class="cookie-link">En savoir plus</a>
+    </div>
+  </div>
+</div>
+
+<style>
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(51, 51, 51, 0.95);
+  color: white;
+  padding: 1rem;
+  z-index: 9999;
+  backdrop-filter: blur(10px);
+}
+
+.cookie-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.cookie-text h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.cookie-text p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.cookie-buttons {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cookie-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.cookie-btn.accept {
+  background: var(--p1, #78aba8);
+  color: white;
+}
+
+.cookie-btn.reject {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
+.cookie-btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+.cookie-link {
+  color: var(--p1, #78aba8);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.cookie-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .cookie-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .cookie-buttons {
+    justify-content: center;
+  }
+}
+</style>
+
+<script>
+// Gestion des cookies
+document.addEventListener('DOMContentLoaded', function() {
+  const cookieBanner = document.getElementById('cookie-banner');
+  const acceptBtn = document.getElementById('accept-cookies');
+  const rejectBtn = document.getElementById('reject-cookies');
+  
+  // Vérifier si l'utilisateur a déjà fait un choix
+  if (!localStorage.getItem('cookieChoice')) {
+    cookieBanner.style.display = 'block';
+  }
+  
+  // Accepter les cookies
+  acceptBtn.addEventListener('click', function() {
+    localStorage.setItem('cookieChoice', 'accepted');
+    localStorage.setItem('cookieDate', new Date().toISOString());
+    cookieBanner.style.display = 'none';
+    
+    // Activer Google Analytics si configuré
+    if (typeof gtag !== 'undefined') {
+      gtag('consent', 'update', {
+        'analytics_storage': 'granted'
+      });
+    }
+  });
+  
+  // Refuser les cookies
+  rejectBtn.addEventListener('click', function() {
+    localStorage.setItem('cookieChoice', 'rejected');
+    localStorage.setItem('cookieDate', new Date().toISOString());
+    cookieBanner.style.display = 'none';
+    
+    // Désactiver Google Analytics
+    if (typeof gtag !== 'undefined') {
+      gtag('consent', 'update', {
+        'analytics_storage': 'denied'
+      });
+    }
+  });
+});
+</script>

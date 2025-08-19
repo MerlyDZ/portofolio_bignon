@@ -1,21 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
-  
-<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<html lang="fr">
 <head>
     <!-- required meta -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <!-- #keywords -->
-    <meta name="keywords" content="boot, Bootstrap, Protfolily HTML Template" />
+    <meta name="keywords" content="Innocent GBEDONOU, entrepreneur béninois, Bignon du Bénin, ameublement, design, contact" />
     <!-- #description -->
     <meta
       name="description"
-      content="Protfolily - Responsive Personal Portfolio & Resume HTML Template"
+      content="Contactez Innocent GBEDONOU et son équipe Bignon du Bénin. Nous sommes là pour vous aider avec tous vos projets d'ameublement."
     />
     <!-- #title -->
-    <title>Portfolify - Personal Portfolio & Resume HTML Template</title>
+    <title>Contact - Innocent GBEDONOU | Bignon du Bénin</title>
     <!-- #favicon -->
     <link
       rel="shortcut icon"
@@ -25,15 +24,46 @@
     <!-- ==== css dependencies start ==== -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <!-- AOS  -->
-    <link rel="stylesheet" href="unpkg.com/aos%403.0.0-beta.6/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.css" />
     <!-- swiper  -->
     <link
       rel="stylesheet"
-      href="cdn.jsdelivr.net/npm/swiper%4011/swiper-bundle.min.css"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
     <!-- ICON  -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Configuration PWA -->
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#78aba8" />
+    <meta name="msapplication-TileColor" content="#78aba8" />
+    <meta name="msapplication-navbutton-color" content="#78aba8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Bignon du Bénin" />
+    
+    <!-- Icônes PWA -->
+    <link rel="apple-touch-icon" href="assets/images/logo.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/images/logo.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo.png" />
+    <link rel="apple-touch-icon" sizes="167x167" href="assets/images/logo.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo.png" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://votre-domaine.com/contact.html" />
+    <meta property="og:title" content="Contact - Innocent GBEDONOU | Bignon du Bénin" />
+    <meta property="og:description" content="Contactez Innocent GBEDONOU et son équipe Bignon du Bénin. Nous sommes là pour vous aider avec tous vos projets d'ameublement." />
+    <meta property="og:image" content="https://votre-domaine.com/assets/images/usera.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://votre-domaine.com/contact.html" />
+    <meta property="twitter:title" content="Contact - Innocent GBEDONOU | Bignon du Bénin" />
+    <meta property="twitter:description" content="Contactez Innocent GBEDONOU et son équipe Bignon du Bénin. Nous sommes là pour vous aider avec tous vos projets d'ameublement." />
+    <meta property="twitter:image" content="https://votre-domaine.com/assets/images/usera.jpg" />
   </head>
   <body>
     <!-- don't remove this  -->
@@ -111,7 +141,7 @@
               <div
                 class="d-flex flex-column gap-8 justify-content-center align-items-center mt-6"
               >
-                <a href="index-2.html" class="side-icon bgn2-color brn4">
+                <a href="index.html" class="side-icon bgn2-color brn4">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="11"
@@ -167,7 +197,7 @@
 
                 <div class="d-flex flex-column align-items-center gap-1">
                   <span class="toggle_name fs-eleven n5-color">DarkMode</span>
-                  <button class="side-icon bg1-color mood_toggle">
+                  <button class="side-icon bg1-color mood_toggle" aria-label="Basculer entre le mode clair et sombre">
                     <i class="mood_icon ph-fill ph-moon fs-six n11-color"></i>
                   </button>
                 </div>
@@ -186,7 +216,7 @@
                     >
                       <img
                         src="assets/images/usera.jpg"
-                        alt="user"
+                        alt="Innocent GBEDONOU - Entrepreneur béninois"
                         class=""
                       />
                     </div>
@@ -220,29 +250,36 @@
                 <!-- menu list -->
                 <div class="menu-list">
                   <ul class="d-flex flex-column gap-3">
-                    <li class="rounded-3 bg1-color">
+                    <li class="rounded-3">
                       <a
-                        href="index-2.html"
-                        class="d-flex align-items-center gap-2 n11-color fs-eight px-3 py-2"
-                        ><i class="ph ph-user fs-six"></i> A Propos</a
+                        href="index.html"
+                        class="d-flex align-items-center gap-2 n5-color fs-eight px-3 py-2"
+                        ><i class="ph ph-house fs-six"></i> Accueil</a
+                      >
+                    </li>
+                    <li class="rounded-3">
+                      <a
+                        href="about.html"
+                        class="d-flex align-items-center gap-2 n5-color fs-eight px-3 py-2"
+                        ><i class="ph ph-user fs-six"></i> À Propos</a
                       >
                     </li>
                     <li class="rounded-3 bg1-color">
                       <a
                         href="contact.html"
-                        class="d-flex align-items-center gap-2 n5-color fs-eight px-3 py-2"
+                        class="d-flex align-items-center gap-2 n11-color fs-eight px-3 py-2"
                         ><i class="ph ph-envelope fs-six"></i>Contact</a
                       >
                     </li>
                   </ul>
                 </div>
               </div>
-              <a
+              <!-- <a
                 href="contact.html"
                 class="primary-btn fw-medium px-3 px-md-6 py-2 py-md-4 rounded-pill d-flex align-items-center gap-2 mx-auto"
               >
                 <i class="ph ph-paper-plane-tilt"></i> Contactez-Nous
-              </a>
+              </a> -->
             </div>
           </div>
         </div>
@@ -254,7 +291,7 @@
         <div
           class="w-100 bgn1-color p-3 position-fixed z-3 top-0 d-lg-none d-flex align-items-center justify-content-between br-bottom-n5 box-shadow1"
         >
-          <a href="index-2.html" class="side-icon bgn2-color brn4">
+          <a href="index.html" class="side-icon bgn2-color brn4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="11"
@@ -314,33 +351,32 @@
             </button>
           </div>
         </div>
+        
         <!-- bottom header  -->
-        <div
-          class="w-100 bgn1-color p-3 position-fixed z-3 bottom-0 d-block d-lg-none br-top-n5 box-shadow1"
-        >
+        <div class="w-100 bgn1-color p-3 position-fixed z-3 bottom-0 d-block d-lg-none br-top-n5 box-shadow1">
           <div class="header-bottom-menu w-full">
             <ul class="d-flex gap-1 align-items-center justify-content-between">
-              <li>
-                <a
-                  href="index-2.html"
-                  class="d-flex align-items-center gap-2 n5-color fs-eight p-2"
-                >
-                  <span
-                    class="fs-five d-flex align-items-center justify-content-center"
-                  >
+              <li class="rounded-3">
+                <a href="index.html" class="d-flex align-items-center gap-2 n5-color fs-eight p-2">
+                  <span class="fs-five d-flex align-items-center justify-content-center">
+                    <i class="ph-fill ph-house"></i>
+                  </span>
+                  <span class="d-none d-md-block">Accueil</span>
+                </a>
+              </li>
+              <li class="rounded-3">
+                <a href="about.html" class="d-flex align-items-center gap-2 n5-color fs-eight p-2">
+                  <span class="fs-five d-flex align-items-center justify-content-center">
                     <i class="ph-fill ph-user"></i>
                   </span>
-                  <span class="d-none d-md-block">A Propos</span></a
-                >
+                  <span class="d-none d-md-block">À Propos</span>
+                </a>
               </li>
-              <li class="rounded-3 bg1-color"><a
-                  href="#"
-                  class="d-flex align-items-center gap-2 n11-color fs-eight p-2"
-                >
-                  <span
-                    class="fs-five d-flex align-items-center justify-content-center"
-                    ><i class="ph-fill ph-envelope"></i
-                  ></span>
+              <li class="rounded-3 bg1-color">
+                <a href="contact.html" class="d-flex align-items-center gap-2 n11-color fs-eight p-2">
+                  <span class="fs-five d-flex align-items-center justify-content-center">
+                    <i class="ph-fill ph-envelope"></i>
+                  </span>
                   <span class="d-none d-md-block">Contact</span>
                 </a>
               </li>
@@ -350,7 +386,7 @@
 
         <!-- color palettes btns -->
         <div class="color-switcher">
-          <button class="switcher-btn">
+          <button class="switcher-btn" aria-label="Ouvrir le sélecteur de couleurs">
             <i class="ph ph-gear-six"></i>
           </button>
           <div class="pallates box-shadow2 brn4">
@@ -564,17 +600,24 @@
         <section
           class="container d-flex flex-wrap gap-3 gap-md-6 justify-content-center justify-content-sm-between align-items-center pb-4 pb-md-8 text-center mb-16 mb-lg-0"
         >
-          <span class="fs-eight fw-medium n5-color order-sm-2"
-            >Réalisé par
-            <a
-              href="https://generationimpact3.0.com"
-              class="fs-eight fw-medium n5-color"
-              >Génération Impact 3.0</a
-            ></span
-          >
+          <div class="d-flex flex-column gap-2 align-items-center">
+            <span class="fs-eight fw-medium n5-color order-sm-2"
+              >Réalisé par
+              <a
+                href="https://generationimpact3.0.com"
+                class="fs-eight fw-medium n5-color"
+                >Génération Impact 3.0</a
+              ></span
+            >
+            <div class="d-flex gap-3 fs-nine n4-color">
+              <a href="privacy-policy.html" class="n4-color">Politique de confidentialité</a>
+              <span>|</span>
+              <a href="terms-of-service.html" class="n4-color">Conditions d'utilisation</a>
+            </div>
+          </div>
           <span class="fs-eight fw-medium n5-color order-sm-1"
             >Copyright © 2024
-            <a href="index-2.html" class="fs-eight fw-medium n5-color"
+            <a href="index.html" class="fs-eight fw-medium n5-color"
               >BIGNON DU BENIN</a
             >. Tous droits réservés.</span
           >
@@ -587,14 +630,256 @@
     <script src="assets/js/plugins/plugins.js"></script>
     <script src="assets/js/main.js"></script>
     <!-- swiper js  -->
-    <script src="cdn.jsdelivr.net/npm/swiper%4011/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- email js  -->
     <script
       type="text/javascript"
-      src="cdn.jsdelivr.net/npm/%40emailjs/browser%404/dist/email.min.js"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
     ></script>
     <!-- aos -->
-    <script src="unpkg.com/aos%403.0.0-beta.6/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.js"></script>
+    
+    <!-- Styles pour les notifications et navigation mobile -->
+    <style>
+      .notification {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 10000;
+        max-width: 400px;
+        animation: slideIn 0.3s ease-out;
+      }
+      
+      .notification-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        color: white;
+        font-weight: 500;
+      }
+      
+      .notification-success {
+        background: linear-gradient(135deg, #28a745, #20c997);
+      }
+      
+      .notification-error {
+        background: linear-gradient(135deg, #dc3545, #e74c3c);
+      }
+      
+      .notification-close {
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        margin-left: 1rem;
+        padding: 0.25rem;
+        border-radius: 4px;
+        transition: background-color 0.2s;
+      }
+      
+      .notification-close:hover {
+        background-color: rgba(255,255,255,0.2);
+      }
+      
+      .notification-message {
+        flex: 1;
+      }
+      
+      @keyframes slideIn {
+        from {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      
+      /* Styles pour la navigation mobile */
+      .header-bottom-menu {
+        background: var(--bgn1);
+        border-radius: 20px 20px 0 0;
+        padding: 0.5rem;
+      }
+      
+      .header-bottom-menu ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      
+      .header-bottom-menu li {
+        flex: 1;
+        text-align: center;
+        transition: all 0.3s ease;
+      }
+      
+      .header-bottom-menu li:hover {
+        transform: translateY(-2px);
+      }
+      
+      .header-bottom-menu a {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 0.5rem;
+        border-radius: 15px;
+        transition: all 0.3s ease;
+      }
+      
+      .header-bottom-menu .bg1-color {
+        background: rgba(var(--p1), 0.1) !important;
+        border: 2px solid rgba(var(--p1), 0.3);
+      }
+      
+      .header-bottom-menu .n11-color {
+        color: var(--p1) !important;
+        font-weight: 600;
+      }
+      
+      .header-bottom-menu .n5-color {
+        color: var(--n5);
+        opacity: 0.8;
+      }
+      
+      .header-bottom-menu .n5-color:hover {
+        opacity: 1;
+        color: var(--p1);
+      }
+      
+      .header-bottom-menu i {
+        font-size: 1.2rem;
+        margin-bottom: 0.25rem;
+      }
+      
+      @media (max-width: 768px) {
+        .notification {
+          top: 10px;
+          right: 10px;
+          left: 10px;
+          max-width: none;
+        }
+        
+        .header-bottom-menu {
+          padding: 0.75rem 0.5rem;
+        }
+        
+        .header-bottom-menu a {
+          padding: 1rem 0.5rem;
+        }
+        
+        .header-bottom-menu .d-none.d-md-block {
+          display: block !important;
+          font-size: 0.75rem;
+          margin-top: 0.25rem;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .header-bottom-menu {
+          padding: 1rem 0.5rem;
+        }
+        
+        .header-bottom-menu a {
+          padding: 1.25rem 0.5rem;
+        }
+        
+        .header-bottom-menu i {
+          font-size: 1.4rem;
+        }
+      }
+    </style>
+    
+    <!-- EmailJS Configuration -->
+    <script>
+      (function() {
+        // Remplacez par votre Public Key EmailJS
+        emailjs.init("YOUR_PUBLIC_KEY");
+      })();
+    </script>
+    
+    <!-- Contact Form Handler -->
+    <script>
+      document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        // Afficher un indicateur de chargement
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="ph ph-spinner-gap ph-spin"></i> Envoi en cours...';
+        submitBtn.disabled = true;
+        
+        // Préparer les données du formulaire
+        const templateParams = {
+          name: document.getElementById('name').value,
+          email: document.getElementById('email').value,
+          phone: document.getElementById('phone').value,
+          subject: document.getElementById('subject').value,
+          message: document.getElementById('message').value
+        };
+        
+        // Envoyer l'email via EmailJS
+        emailjs.send(
+          'YOUR_SERVICE_ID',        // Remplacez par votre Service ID
+          'YOUR_TEMPLATE_ID',       // Remplacez par votre Template ID
+          templateParams
+        )
+        .then(function(response) {
+          console.log('Email envoyé avec succès:', response);
+          
+          // Afficher le message de succès
+          showNotification('✅ Message envoyé avec succès ! Nous vous contacterons bientôt.', 'success');
+          
+          // Réinitialiser le formulaire
+          document.getElementById('contact-form').reset();
+          
+          // Réinitialiser le bouton
+          submitBtn.innerHTML = originalText;
+          submitBtn.disabled = false;
+        })
+        .catch(function(error) {
+          console.error('Erreur lors de l\'envoi:', error);
+          
+          // Afficher le message d'erreur
+          showNotification('❌ Erreur lors de l\'envoi. Veuillez réessayer.', 'error');
+          
+          // Réinitialiser le bouton
+          submitBtn.innerHTML = originalText;
+          submitBtn.disabled = false;
+        });
+      });
+      
+      // Fonction pour afficher les notifications
+      function showNotification(message, type) {
+        // Créer l'élément de notification
+        const notification = document.createElement('div');
+        notification.className = `notification notification-${type}`;
+        notification.innerHTML = `
+          <div class="notification-content">
+            <span class="notification-message">${message}</span>
+            <button class="notification-close" onclick="this.parentElement.parentElement.remove()">
+              <i class="ph ph-x"></i>
+            </button>
+          </div>
+        `;
+        
+        // Ajouter au body
+        document.body.appendChild(notification);
+        
+        // Supprimer automatiquement après 5 secondes
+        setTimeout(() => {
+          if (notification.parentElement) {
+            notification.remove();
+          }
+        }, 5000);
+      }
+    </script>
 
   </body>
 

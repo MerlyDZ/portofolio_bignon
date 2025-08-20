@@ -610,6 +610,7 @@
                 </label>
               </div>
               <button
+                type="submit"
                 id="contact-submit-btn"
                 class="primary-btn fw-medium px-3 px-md-6 py-2 py-md-4 rounded-pill mt-5 mt-md-10"
               >
@@ -722,13 +723,34 @@
           opacity: 1;
         }
       }
+      #contact-submit-btn {
+        background: linear-gradient(135deg, #007bff, #0056b3); /* Dégradé bleu */
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        transition: all 0.35s ease;
+        font-weight: 600;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      #contact-submit-btn:hover {
+        background: linear-gradient(135deg, #0056b3, #003d82); /* Couleur plus foncée */
+        transform: translateY(-3px) scale(1.03); /* Léger effet de "lift" */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+      }
+
+      #contact-submit-btn:active {
+        transform: translateY(0) scale(0.98); /* Petit effet d'appui */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      }
+
     </style>
     
     <!-- EmailJS Configuration -->
     <script>
       (function() {
         // Remplacez par votre Public Key EmailJS
-        emailjs.init("YOUR_PUBLIC_KEY");
+        emailjs.init("99SSYDmc5i0WYN-0U");
       })();
     </script>
     
@@ -753,11 +775,8 @@
         };
         
         // Envoyer l'email via EmailJS
-        emailjs.send(
-          'YOUR_SERVICE_ID',        // Remplacez par votre Service ID
-          'YOUR_TEMPLATE_ID',       // Remplacez par votre Template ID
-          templateParams
-        )
+        emailjs.send('service_o7l6htb','template_mijbyxl', templateParams)
+
         .then(function(response) {
           console.log('Email envoyé avec succès:', response);
           

@@ -917,30 +917,25 @@
             const indicators = document.querySelectorAll('.carousel-indicators button');
             let currentIndex = 0;
 
-            // Fonction pour changer l'image
+            // Fonction pour changer l'image (sans effet de fondu)
             function changeImage(index) {
                 // Vérifier si l'index est valide
                 if (index < 0 || index >= images.length) return;
 
-                // Mettre à jour l'image avec effet de fondu
-                carouselImage.style.opacity = 0;
+                // Mettre à jour l'image directement (sans effet de fondu)
+                carouselImage.src = images[index];
+                carouselImage.alt = altTexts[index];
 
-                setTimeout(() => {
-                    carouselImage.src = images[index];
-                    carouselImage.alt = altTexts[index];
-                    carouselImage.style.opacity = 1;
+                // Mettre à jour les indicateurs
+                indicators.forEach((indicator, i) => {
+                    if (i === index) {
+                        indicator.classList.add('active');
+                    } else {
+                        indicator.classList.remove('active');
+                    }
+                });
 
-                    // Mettre à jour les indicateurs
-                    indicators.forEach((indicator, i) => {
-                        if (i === index) {
-                            indicator.classList.add('active');
-                        } else {
-                            indicator.classList.remove('active');
-                        }
-                    });
-
-                    currentIndex = index;
-                }, 300);
+                currentIndex = index;
             }
 
             // Ajouter les événements aux indicateurs
@@ -954,7 +949,7 @@
             let intervalId = setInterval(() => {
                 let nextIndex = (currentIndex + 1) % images.length;
                 changeImage(nextIndex);
-            }, 3000);
+            }, 4000);
 
             // Arrêter le défilement automatique au survol
             const carouselContainer = document.querySelector('.carousel-container');

@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<!-- Bootstrap CSS -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- #keywords -->
     <meta name="keywords" content="Innocent GBEDONOU, entrepreneur béninois, Bignon du Bénin, ameublement, design" />
     <!-- #description -->
@@ -63,6 +65,69 @@
     <meta property="twitter:title" content="Innocent GBEDONOU - Entrepreneur Béninois | Bignon du Bénin" />
     <meta property="twitter:description" content="Innocent GBEDONOU - Entrepreneur béninois passionné par le design et l'ameublement. Découvrez son parcours et son entreprise Bignon du Bénin." />
     <meta property="twitter:image" content="https://votre-domaine.com/assets/images/usera.jpg" />
+
+    <style>
+        /* Styles pour le carrousel personnalisé */
+        .custom-carousel {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+
+        .carousel-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .carousel-item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+            border-radius: 50%;
+        }
+
+        .carousel-item.active {
+            opacity: 1;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .carousel-indicators {
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            z-index: 10;
+        }
+
+        .carousel-indicators button {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: none;
+            background-color: rgba(120, 171, 168, 0.5);
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .carousel-indicators button.active {
+            background-color: rgba(120, 171, 168, 1);
+        }
+    </style>
   </head>
   <body>
     <!-- don't remove this  -->
@@ -445,74 +510,65 @@
           </div>
         </div>
 
-        <!-- banner section start  -->
-        <section
-          class="pt-120 pb-60 br-bottom-n3 overflow-hidden mt-10 mt-lg-0"
-        >
-          <div class="container">
-            <div
-              class="d-flex flex-wrap gap-10 gap-md-15 align-items-center justify-content-between"
-            >
-              <div class="banner-content">
-                <h2 class="typing-text display-one p1-color mt-2 mb-3"></h2>
-                <p class="fs-seven n5-color" style="line-height: 1.8; text-align: justify;">
+        <section class="pt-120 pb-60 br-bottom-n3 overflow-hidden mt-10 mt-lg-0">
+                <div class="container">
+                    <div class="d-flex flex-wrap gap-10 gap-md-15 align-items-center justify-content-between">
+                        <div class="banner-content">
+                            <h2 class="display-one p1-color mt-2 mb-3">Innocent GBEDONOU</h2>
+                            <p class="fs-seven n5-color" style="line-height: 1.8; text-align: justify;">
+                                Innocent GBEDONOU, c’est quelqu’un qui a su transformer une passion en une véritable aventure entrepreneuriale.
+                                <br><br>
+                                À travers son travail, il valorise le savoir-faire local et promeut des créations modernes inspirées de l’identité africaine.
+                                Il est perçu comme un profil dynamique, créatif et inspirant, qui participe activement au développement de l’artisanat et de l’économie créative au Bénin.
+                            </p>
+                        </div>
 
-                  Innocent GBEDONOU, c’est quelqu’un qui a su transformer une passion en une véritable aventure entrepreneuriale.
+                        <div class="position-relative profile-img">
+                            <div class="user-bg"></div>
+                            <div class="bg-white">
+                                <div class="carousel-container">
+                                    <img
+                                        src="assets/images/usera.jpg"
+                                        alt="Innocent GBEDONOU - Entrepreneur béninois"
+                                        class="user-img"
+                                        id="carousel-image"
+                                    />
+                                </div>
+                            </div>
+                            <!-- Indicateurs -->
+                            <div class="carousel-indicators">
+                                <button class="active" data-slide-to="0"></button>
+                                <button data-slide-to="1"></button>
+                                <button data-slide-to="2"></button>
+                                <button data-slide-to="3"></button>
+                            </div>
+                        </div>
+                    </div>
 
-                  <br>
-                  À travers son travail, il valorise le savoir-faire local et promeut des créations modernes inspirées de l’identité africaine.
-                  Il est perçu comme un profil dynamique, créatif et inspirant, qui participe activement au développement de l’artisanat et de l’économie créative au Bénin.                  <br>
-
-                </p>
-                <div
-                  class="d-flex flex-wrap align-itmes-center gap-3 gap-md-6 mt-4 mt-md-8"
-                >
-
+                    <div class="banner-counter d-flex flex-wrap flex-xl-nowrap align-items-center gap-3 gap-md-6 mt-10 mt-md-17">
+                        <div class="d-flex align-items-center gap-2 gap-xl-4">
+                            <h2 class="display-two fw-semibold p1-color">
+                                <span class="counter">7+</span>
+                            </h2>
+                            <div class="line"></div>
+                            <span class="n5-color">Ans d’expérience</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 gap-xl-4">
+                            <h2 class="display-two fw-semibold p1-color">
+                                <span class="counter">250+</span>
+                            </h2>
+                            <div class="line"></div>
+                            <span class="n5-color">Clients livrés</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 gap-xl-4">
+                            <h2 class="display-two fw-semibold p1-color d-flex gap-1">
+                                <span class="counter">150+</span>
+                            </h2>
+                            <div class="line"></div>
+                            <span class="n5-color">Clients Satisfaits</span>
+                        </div>
+                    </div>
                 </div>
-              </div>
-
-              <div class="position-relative profile-img">
-                <div class="user-bg"></div>
-                <div class="bg-white">
-                  <img
-                    src="assets/images/usera.jpg"
-                    alt="Innocent GBEDONOU - Entrepreneur béninois"
-                    class="user-img"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div class="container">
-              <div
-                class="d-flex flex-wrap gap-10 gap-md-15 align-items-center justify-content-between"
-              >
-              <div
-                class="banner-counter d-flex flex-wrap flex-xl-nowrap align-items-center gap-3 gap-md-6 mt-10 mt-md-17"
-              >
-              <div class="d-flex align-items-center gap-2 gap-xl-4">
-                <h2 class="display-two fw-semibold p1-color">
-                  <span class="counter">7+</span>
-                </h2>
-                <div class="line"></div>
-                <span class="n5-color">Ans d’expérience</span>
-              </div>
-              <div class="d-flex align-items-center gap-2 gap-xl-4">
-                <h2 class="display-two fw-semibold p1-color">
-                  <span class="counter">250+</span>
-                </h2>
-                <div class="line"></div>
-                <span class="n5-color">Clients livrés</span>
-              </div>
-              <div class="d-flex align-items-center gap-2 gap-xl-4">
-                <h2 class="display-two fw-semibold p1-color d-flex gap-1">
-                  <span class="counter">150+</span>
-                </h2>
-                <div class="line"></div>
-                <span class="n5-color">Clients Satisfaits</span>
-              </div>
-            </div>
-          </div>
         </section>
         <!-- Histoire & Fondateur section -->
         <div class="container-fluid mt-8 mt-md-15 px-4 px-md-5">
@@ -839,6 +895,89 @@
     ></script>
     <!-- aos -->
     <script src="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tableau des images à afficher (chemins relatifs depuis assets/images)
+            const images = [
+                "assets/images/usera.jpg",
+                "assets/images/profile.jpg",
+                "assets/images/profile1.jpg",
+                "assets/images/profile2.jpg"
+            ];
+
+            // Textes alternatifs pour chaque image
+            const altTexts = [
+                "Innocent GBEDONOU - Entrepreneur béninois",
+                "Innocent GBEDONOU - Portrait professionnel",
+                "Innocent GBEDONOU - Projet 1",
+                "Innocent GBEDONOU - Projet 2"
+            ];
+
+            const carouselImage = document.getElementById('carousel-image');
+            const indicators = document.querySelectorAll('.carousel-indicators button');
+            let currentIndex = 0;
+
+            // Fonction pour changer l'image
+            function changeImage(index) {
+                // Vérifier si l'index est valide
+                if (index < 0 || index >= images.length) return;
+
+                // Mettre à jour l'image avec effet de fondu
+                carouselImage.style.opacity = 0;
+
+                setTimeout(() => {
+                    carouselImage.src = images[index];
+                    carouselImage.alt = altTexts[index];
+                    carouselImage.style.opacity = 1;
+
+                    // Mettre à jour les indicateurs
+                    indicators.forEach((indicator, i) => {
+                        if (i === index) {
+                            indicator.classList.add('active');
+                        } else {
+                            indicator.classList.remove('active');
+                        }
+                    });
+
+                    currentIndex = index;
+                }, 300);
+            }
+
+            // Ajouter les événements aux indicateurs
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    changeImage(index);
+                });
+            });
+
+            // Défilement automatique
+            let intervalId = setInterval(() => {
+                let nextIndex = (currentIndex + 1) % images.length;
+                changeImage(nextIndex);
+            }, 3000);
+
+            // Arrêter le défilement automatique au survol
+            const carouselContainer = document.querySelector('.carousel-container');
+            carouselContainer.addEventListener('mouseenter', () => {
+                clearInterval(intervalId);
+            });
+
+            carouselContainer.addEventListener('mouseleave', () => {
+                intervalId = setInterval(() => {
+                    let nextIndex = (currentIndex + 1) % images.length;
+                    changeImage(nextIndex);
+                }, 3000);
+            });
+
+            // Gestion des erreurs de chargement d'image
+            carouselImage.addEventListener('error', function() {
+                console.error("Erreur de chargement de l'image: " + this.src);
+                // Passer à l'image suivante en cas d'erreur
+                let nextIndex = (currentIndex + 1) % images.length;
+                changeImage(nextIndex);
+            });
+        });
+    </script>
   </body>
 
 </html>

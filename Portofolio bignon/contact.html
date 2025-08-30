@@ -744,88 +744,204 @@
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
       }
 
+      .form-error {
+        border: 2px solid #dc3545 !important;
+        background-color: rgba(220, 53, 69, 0.1) !important;
+      }
+
+      .error-message {
+        color: #dc3545;
+        font-size: 0.875rem;
+        margin-top: 0.25rem;
+        display: none;
+      }
+
     </style>
     
-    <!-- EmailJS Configuration -->
+    <!-- EmailJS Configuration et Contact Form Handler -->
     <script>
-      (function() {
-        // Remplacez par votre Public Key EmailJS
+      // Attendre que EmailJS soit chargé
+      document.addEventListener('DOMContentLoaded', function() {
+        // Initialiser EmailJS
         emailjs.init("MMEQzfK3Gd8u2Xygc");
-      })();
-    </script>
-    
-    <!-- Contact Form Handler -->
-    <script>
-      document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault();
         
-        // Afficher un indicateur de chargement
-        const submitBtn = this.querySelector('button[type="submit"]');
-        const originalText = submitBtn.innerHTML;
-        submitBtn.innerHTML = '<i class="ph ph-spinner-gap ph-spin"></i> Envoi en cours...';
-        submitBtn.disabled = true;
+        // Récupérer le formulaire
+        const contactForm = document.getElementById('contact-form');
         
-        // Préparer les données du formulaire
-        const templateParams = {
-          name: document.getElementById('name').value,
-          email: document.getElementById('email').value,
-          phone: document.getElementById('phone').value,
-          subject: document.getElementById('subject').value,
-          message: document.getElementById('message').value
-        };
+        if (contactForm) {
+          contactForm.addEventListener('submit', handleFormSubmit);
+        }
         
-        // Envoyer l'email via EmailJS
-        emailjs.send('service_o7l6htb','template_mijbyxl', templateParams)
-
-        .then(function(response) {
-          console.log('Email envoyé avec succès:', response);
+        // Fonction de gestion de la soumission du formulaire
+        function handleFormSubmit(event) {
+          event.preventDefault();
           
-          // Afficher le message de succès
-          showNotification('✅ Message envoyé avec succès ! Nous vous contacterons bientôt.', 'success');
-          
-          // Réinitialiser le formulaire
-          document.getElementById('contact-form').reset();
-          
-          // Réinitialiser le bouton
-          submitBtn.innerHTML = originalText;
-          submitBtn.disabled = false;
-        })
-        .catch(function(error) {
-          console.error('Erreur lors de l\'envoi:', error);
-          
-          // Afficher le message d'erreur
-          showNotification('❌ Erreur lors de l\'envoi. Veuillez réessayer.', 'error');
-          
-          // Réinitialiser le bouton
-          submitBtn.innerHTML = originalText;
-          submitBtn.disabled = false;
-        });
-      });
-      
-      // Fonction pour afficher les notifications
-      function showNotification(message, type) {
-        // Créer l'élément de notification
-        const notification = document.createElement('div');
-        notification.className = `notification notification-${type}`;
-        notification.innerHTML = `
-          <div class="notification-content">
-            <span class="notification-message">${message}</span>
-            <button class="notification-close" onclick="this.parentElement.parentElement.remove()">
-              <i class="ph ph-x"></i>
-            </button>
-          </div>
-        `;
-        
-        // Ajouter au body
-        document.body.appendChild(notification);
-        
-        // Supprimer automatiquement après 5 secondes
-        setTimeout(() => {
-          if (notification.parentElement) {
-            notification.remove();
+          // Valider le formulaire
+          if (!validateForm()) {
+            return;
           }
-        }, 5000);
-      }
+          
+          // Afficher un indicateur de chargement
+          const submitBtn = this.querySelector('button[type="submit"]');
+          const originalText = submitBtn.innerHTML;
+          submitBtn.innerHTML = '<i class="ph ph-spinner-gap ph-spin"></i> Envoi en cours...';
+          submitBtn.disabled = true;
+          
+          // Préparer les données du formulaire
+          const templateParams = {
+            name: document.getElementById('name').value.trim(),
+            email: document.getElementById('email').value.trim(),
+            phone: document.getElementById('phone').value.trim(),
+            subject: document.getElementById('subject').value.trim(),
+            message: document.getElementById('message').value.trim()
+          };
+          
+          // Envoyer l'email via EmailJS
+          emailjs.send('service_o7l6htb', 'template_mijbyxl', templateParams)
+            .then(function(response) {
+              console.log('Email envoyé avec succès:', response);
+              
+              // Afficher le message de succès
+              showNotification('✅ Message envoyé avec succès ! Nous vous contacterons bientôt.', 'success');
+              
+              // Réinitialiser le formulaire
+              contactForm.reset();
+              
+              // Réinitialiser le bouton
+              submitBtn.innerHTML = originalText;
+              submitBtn.disabled = false;
+            })
+            .catch(function(error) {
+              console.error('Erreur lors de l\'envoi:', error);
+              
+              // Afficher le message d'erreur avec plus de détails
+              let errorMessage = '❌ Erreur lors de l\'envoi. ';
+              if (error.text) {
+                errorMessage += error.text;
+              } else if (error.status) {
+                errorMessage += `Code d'erreur: ${error.status}`;
+              } else {
+                errorMessage += 'Veuillez réessayer.';
+              }
+              
+              showNotification(errorMessage, 'error');
+              
+              // Réinitialiser le bouton
+              submitBtn.innerHTML = originalText;
+              submitBtn.disabled = false;
+            });
+        }
+        
+        // Fonction de validation du formulaire
+        function validateForm() {
+          let isValid = true;
+          
+          // Réinitialiser les erreurs précédentes
+          clearFormErrors();
+          
+          // Valider le nom
+          const name = document.getElementById('name');
+          if (!name.value.trim()) {
+            showFieldError(name, 'Le nom est requis');
+            isValid = false;
+          }
+          
+          // Valider l'email
+          const email = document.getElementById('email');
+          if (!email.value.trim()) {
+            showFieldError(email, 'L\'email est requis');
+            isValid = false;
+          } else if (!isValidEmail(email.value.trim())) {
+            showFieldError(email, 'Format d\'email invalide');
+            isValid = false;
+          }
+          
+          // Valider le téléphone
+          const phone = document.getElementById('phone');
+          if (!phone.value.trim()) {
+            showFieldError(phone, 'Le téléphone est requis');
+            isValid = false;
+          }
+          
+          // Valider le sujet
+          const subject = document.getElementById('subject');
+          if (!subject.value.trim()) {
+            showFieldError(subject, 'Le sujet est requis');
+            isValid = false;
+          }
+          
+          // Valider le message
+          const message = document.getElementById('message');
+          if (!message.value.trim()) {
+            showFieldError(message, 'Le message est requis');
+            isValid = false;
+          } else if (message.value.trim().length < 10) {
+            showFieldError(message, 'Le message doit contenir au moins 10 caractères');
+            isValid = false;
+          }
+          
+          return isValid;
+        }
+        
+        // Fonction pour afficher une erreur de champ
+        function showFieldError(field, message) {
+          field.classList.add('form-error');
+          
+          // Créer ou mettre à jour le message d'erreur
+          let errorDiv = field.parentElement.querySelector('.error-message');
+          if (!errorDiv) {
+            errorDiv = document.createElement('div');
+            errorDiv.className = 'error-message';
+            field.parentElement.appendChild(errorDiv);
+          }
+          errorDiv.textContent = message;
+          errorDiv.style.display = 'block';
+        }
+        
+        // Fonction pour effacer toutes les erreurs
+        function clearFormErrors() {
+          const errorFields = document.querySelectorAll('.form-error');
+          errorFields.forEach(field => {
+            field.classList.remove('form-error');
+          });
+          
+          const errorMessages = document.querySelectorAll('.error-message');
+          errorMessages.forEach(msg => {
+            msg.style.display = 'none';
+          });
+        }
+        
+        // Fonction pour valider le format email
+        function isValidEmail(email) {
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          return emailRegex.test(email);
+        }
+        
+        // Fonction pour afficher les notifications
+        function showNotification(message, type) {
+          // Créer l'élément de notification
+          const notification = document.createElement('div');
+          notification.className = `notification notification-${type}`;
+          notification.innerHTML = `
+            <div class="notification-content">
+              <span class="notification-message">${message}</span>
+              <button class="notification-close" onclick="this.parentElement.parentElement.remove()">
+                <i class="ph ph-x"></i>
+              </button>
+            </div>
+          `;
+          
+          // Ajouter au body
+          document.body.appendChild(notification);
+          
+          // Supprimer automatiquement après 5 secondes
+          setTimeout(() => {
+            if (notification.parentElement) {
+              notification.remove();
+            }
+          }, 5000);
+        }
+      });
     </script>
 
   </body>
